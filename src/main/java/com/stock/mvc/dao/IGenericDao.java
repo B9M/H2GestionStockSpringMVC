@@ -17,7 +17,7 @@ public interface IGenericDao<E> {
 
 	public E findOne(String paramName, Object paramValue);
 
-	public E findOne(String[] paramName, Object[] paramValue);
+	public E findOne(String[] paramNames, Object[] paramValues);
 
 	public int findCountBy(String paramName, String paramValue);
 

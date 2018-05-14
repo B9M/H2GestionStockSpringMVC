@@ -5,4 +5,5 @@ import com.stock.mvc.entities.Article;
 
 public class ArticleDaoImpl extends GenericDaoImpl<Article> implements IArticleDao{
 	
+	
 }
