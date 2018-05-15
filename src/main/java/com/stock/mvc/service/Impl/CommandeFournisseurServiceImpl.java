@@ -10,53 +10,53 @@ import com.stock.mvc.service.ICommandeFournisseurService;
 @Transactional
 public class CommandeFournisseurServiceImpl implements ICommandeFournisseurService {
 
-	private ICommandeFournisseurDao icfDao;
-	public void setIcfDao(ICommandeFournisseurDao icfDao) {
-		this.icfDao = icfDao;
+	private ICommandeFournisseurDao dao;
+	public void setDao(ICommandeFournisseurDao dao) {
+		this.dao = dao;
 	}
 	@Override
 	public CommandeFournisseur save(CommandeFournisseur entity) {
-		return icfDao.save(entity);
+		return dao.save(entity);
 	}
 
 	@Override
 	public CommandeFournisseur update(CommandeFournisseur entity) {
-		return icfDao.update(entity);
+		return dao.update(entity);
 	}
 
 	@Override
 	public List<CommandeFournisseur> selectAll() {
-		return icfDao.selectAll();
+		return dao.selectAll();
 	}
 
 	@Override
 	public List<CommandeFournisseur> selectAll(String sortField, String sort) {
-		return icfDao.selectAll(sortField, sort);
+		return dao.selectAll(sortField, sort);
 	}
 
 	@Override
 	public CommandeFournisseur getById(Long id) {
-		return icfDao.getById(id);
+		return dao.getById(id);
 	}
 
 	@Override
 	public void remove(Long id) {
-		icfDao.remove(id);		
+		dao.remove(id);		
 	}
 
 	@Override
 	public CommandeFournisseur findOne(String paramName, Object paramValue) {
-		return icfDao.findOne(paramName, paramValue);
+		return dao.findOne(paramName, paramValue);
 	}
 
 	@Override
 	public CommandeFournisseur findOne(String[] paramNames, Object[] paramValues) {
-		return icfDao.findOne(paramNames, paramValues);
+		return dao.findOne(paramNames, paramValues);
 	}
 
 	@Override
 	public int findCountBy(String paramName, String paramValue) {
-		return findCountBy(paramName, paramValue);
+		return dao.findCountBy(paramName, paramValue);
 	}
 
 }

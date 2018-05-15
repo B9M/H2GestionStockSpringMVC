@@ -9,54 +9,54 @@ import com.stock.mvc.entities.LigneVente;
 import com.stock.mvc.service.ILigneVenteService;
 @Transactional
 public class LigneVenteServiceImpl implements ILigneVenteService{
-	private ILigneVenteDao ilvDao;
-	public void setIlvDao(ILigneVenteDao ilvDao) {
-		this.ilvDao = ilvDao;
+	private ILigneVenteDao dao;
+	public void setDao(ILigneVenteDao dao) {
+		this.dao = dao;
 	}
 
 	@Override
 	public LigneVente save(LigneVente entity) {
-		return ilvDao.save(entity);
+		return dao.save(entity);
 	}
 
 	@Override
 	public LigneVente update(LigneVente entity) {
-		return ilvDao.update(entity);
+		return dao.update(entity);
 	}
 
 	@Override
 	public List<LigneVente> selectAll() {
-		return ilvDao.selectAll();
+		return dao.selectAll();
 	}
 
 	@Override
 	public List<LigneVente> selectAll(String sortField, String sort) {
-		return ilvDao.selectAll(sortField, sort);
+		return dao.selectAll(sortField, sort);
 	}
 
 	@Override
 	public LigneVente getById(Long id) {
-		return ilvDao.getById(id);
+		return dao.getById(id);
 	}
 
 	@Override
 	public void remove(Long id) {
-		ilvDao.remove(id);
+		dao.remove(id);
 	}
 
 	@Override
 	public LigneVente findOne(String paramName, Object paramValue) {
-		return ilvDao.findOne(paramName, paramValue);
+		return dao.findOne(paramName, paramValue);
 	}
 
 	@Override
 	public LigneVente findOne(String[] paramNames, Object[] paramValues) {
-		return ilvDao.findOne(paramNames, paramValues);
+		return dao.findOne(paramNames, paramValues);
 	}
 
 	@Override
 	public int findCountBy(String paramName, String paramValue) {
-		return ilvDao.findCountBy(paramName, paramValue);
+		return dao.findCountBy(paramName, paramValue);
 	}
 
 }

@@ -10,53 +10,53 @@ import com.stock.mvc.service.ILigneCommandeClientService;
 @Transactional
 public class LigneCommandeClientServiceImpl implements ILigneCommandeClientService{
 	
-	private ILigneCommandeClientDao ilccDao;
-	public void setIlccDao(ILigneCommandeClientDao ilccDao) {
-		this.ilccDao = ilccDao;
+	private ILigneCommandeClientDao dao;
+	public void setDao(ILigneCommandeClientDao dao) {
+		this.dao = dao;
 	}
 	@Override
 	public LigneCommandeClient save(LigneCommandeClient entity) {
-		return ilccDao.save(entity);
+		return dao.save(entity);
 	}
 
 	@Override
 	public LigneCommandeClient update(LigneCommandeClient entity) {
-		return ilccDao.update(entity);
+		return dao.update(entity);
 	}
 
 	@Override
 	public List<LigneCommandeClient> selectAll() {
-		return ilccDao.selectAll();
+		return dao.selectAll();
 	}
 
 	@Override
 	public List<LigneCommandeClient> selectAll(String sortField, String sort) {
-		return ilccDao.selectAll(sortField, sort);
+		return dao.selectAll(sortField, sort);
 	}
 
 	@Override
 	public LigneCommandeClient getById(Long id) {
-		return ilccDao.getById(id);
+		return dao.getById(id);
 	}
 
 	@Override
 	public void remove(Long id) {
-		ilccDao.remove(id);		
+		dao.remove(id);		
 	}
 
 	@Override
 	public LigneCommandeClient findOne(String paramName, Object paramValue) {
-		return ilccDao.findOne(paramName, paramValue);
+		return dao.findOne(paramName, paramValue);
 	}
 
 	@Override
 	public LigneCommandeClient findOne(String[] paramNames, Object[] paramValues) {
-		return ilccDao.findOne(paramNames, paramValues);
+		return dao.findOne(paramNames, paramValues);
 	}
 
 	@Override
 	public int findCountBy(String paramName, String paramValue) {
-		return ilccDao.findCountBy(paramName, paramValue);
+		return dao.findCountBy(paramName, paramValue);
 	}
 
 }

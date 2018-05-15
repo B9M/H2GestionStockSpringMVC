@@ -10,54 +10,54 @@ import com.stock.mvc.service.IUtilisateurService;
 @Transactional
 public class UtilisateurServiceImpl  implements IUtilisateurService{
 
-	private IUtilisateurDao iuDao;
-	public void setIuDao(IUtilisateurDao iuDao) {
-		this.iuDao = iuDao;
+	private IUtilisateurDao dao;
+	public void setDao(IUtilisateurDao dao) {
+		this.dao = dao;
 	}
 	@Override
 	public Utilisateur save(Utilisateur entity) {
-		return iuDao.save(entity);
+		return dao.save(entity);
 	}
 
 	@Override
 	public Utilisateur update(Utilisateur entity) {
-		return iuDao.update(entity);
+		return dao.update(entity);
 	}
 
 	@Override
 	public List<Utilisateur> selectAll() {
-		return iuDao.selectAll();
+		return dao.selectAll();
 	}
 
 	@Override
 	public List<Utilisateur> selectAll(String sortField, String sort) {
-		return iuDao.selectAll(sortField, sort);
+		return dao.selectAll(sortField, sort);
 	}
 
 	@Override
 	public Utilisateur getById(Long id) {
-		return iuDao.getById(id);
+		return dao.getById(id);
 	}
 
 	@Override
 	public void remove(Long id) {
-		iuDao.remove(id);		
+		dao.remove(id);		
 	}
 
 	@Override
 	public Utilisateur findOne(String paramName, Object paramValue) {
-		return iuDao.findOne(paramName, paramValue);
+		return dao.findOne(paramName, paramValue);
 	}
 
 	@Override
 	public Utilisateur findOne(String[] paramNames, Object[] paramValues) {
-		iuDao.findOne(paramNames, paramValues);	
+		dao.findOne(paramNames, paramValues);	
 		return null;
 	}
 
 	@Override
 	public int findCountBy(String paramName, String paramValue) {
-		return iuDao.findCountBy(paramName, paramValue);
+		return dao.findCountBy(paramName, paramValue);
 	}
 
 }

@@ -9,54 +9,54 @@ import com.stock.mvc.entities.Client;
 import com.stock.mvc.service.IClientService;
 @Transactional
 public class ClientServiceImpl implements IClientService {
-	private IClientDao icDao;
-	public void setIcDao(IClientDao icDao) {
-		this.icDao = icDao;
+	private IClientDao dao;
+	public void setDao(IClientDao dao) {
+		this.dao = dao;
 	}
 	@Override
 	public Client save(Client entity) {
-		return icDao.save(entity);
+		return dao.save(entity);
 	}
 
 	@Override
 	public Client update(Client entity) {
-		return icDao.update(entity);
+		return dao.update(entity);
 	}
 
 	@Override
 	public List<Client> selectAll() {
-		return icDao.selectAll();
+		return dao.selectAll();
 	}
 
 	@Override
 	public List<Client> selectAll(String sortField, String sort) {
-		return icDao.selectAll(sortField, sort);
+		return dao.selectAll(sortField, sort);
 	}
 
 	@Override
 	public Client getById(Long id) {
-		return icDao.getById(id);
+		return dao.getById(id);
 	}
 
 	@Override
 	public void remove(Long id) {
-		icDao.remove(id);		
+		dao.remove(id);		
 	}
 
 	@Override
 	public Client findOne(String paramName, Object paramValue) {
-		icDao.findOne(paramName, paramValue);
+		dao.findOne(paramName, paramValue);
 		return null;
 	}
 
 	@Override
 	public Client findOne(String[] paramNames, Object[] paramValues) {
-		return icDao.findOne(paramNames, paramValues);
+		return dao.findOne(paramNames, paramValues);
 	}
 
 	@Override
 	public int findCountBy(String paramName, String paramValue) {
-		return icDao.findCountBy(paramName, paramValue);
+		return dao.findCountBy(paramName, paramValue);
 	}
 
 }

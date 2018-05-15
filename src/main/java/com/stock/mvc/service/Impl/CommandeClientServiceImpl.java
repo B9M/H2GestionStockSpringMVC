@@ -11,53 +11,53 @@ import com.stock.mvc.service.ICommandeClientService;
 public class CommandeClientServiceImpl implements ICommandeClientService{
 
 	
-	private ICommandeClientDao iccDao;
-	public void setIccDao(ICommandeClientDao iccDao) {
-		this.iccDao = iccDao;
+	private ICommandeClientDao dao;
+	public void setDao(ICommandeClientDao dao) {
+		this.dao = dao;
 	}
 	@Override
 	public CommandeClient save(CommandeClient entity) {
-		return iccDao.save(entity);
+		return dao.save(entity);
 	}
 
 	@Override
 	public CommandeClient update(CommandeClient entity) {
-		return iccDao.update(entity);
+		return dao.update(entity);
 	}
 
 	@Override
 	public List<CommandeClient> selectAll() {
-		return iccDao.selectAll();
+		return dao.selectAll();
 	}
 
 	@Override
 	public List<CommandeClient> selectAll(String sortField, String sort) {
-		return iccDao.selectAll(sortField, sort);
+		return dao.selectAll(sortField, sort);
 	}
 
 	@Override
 	public CommandeClient getById(Long id) {
-		return iccDao.getById(id);
+		return dao.getById(id);
 	}
 
 	@Override
 	public void remove(Long id) {
-		iccDao.remove(id);		
+		dao.remove(id);		
 	}
 
 	@Override
 	public CommandeClient findOne(String paramName, Object paramValue) {
-		return iccDao.findOne(paramName, paramValue);
+		return dao.findOne(paramName, paramValue);
 	}
 
 	@Override
 	public CommandeClient findOne(String[] paramNames, Object[] paramValues) {
-		return iccDao.findOne(paramNames, paramValues);
+		return dao.findOne(paramNames, paramValues);
 	}
 
 	@Override
 	public int findCountBy(String paramName, String paramValue) {
-		return iccDao.findCountBy(paramName, paramValue);
+		return dao.findCountBy(paramName, paramValue);
 	}
  
 }

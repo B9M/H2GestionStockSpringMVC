@@ -10,53 +10,53 @@ import com.stock.mvc.service.IVenteService;
 @Transactional
 public class VenteServiceImpl implements IVenteService {
 
-	private IVenteDao ivDao;
-	public void setIvDao(IVenteDao ivDao) {
-		this.ivDao = ivDao;
+	private IVenteDao dao;
+	public void setDao(IVenteDao dao) {
+		this.dao = dao;
 	}
 	@Override
 	public Vente save(Vente entity) {
-		return ivDao.save(entity);
+		return dao.save(entity);
 	}
 
 	@Override
 	public Vente update(Vente entity) {
-		return ivDao.update(entity);
+		return dao.update(entity);
 	}
 
 	@Override
 	public List<Vente> selectAll() {
-		return ivDao.selectAll();
+		return dao.selectAll();
 	}
 
 	@Override
 	public List<Vente> selectAll(String sortField, String sort) {
-		return ivDao.selectAll(sortField, sort);
+		return dao.selectAll(sortField, sort);
 	}
 
 	@Override
 	public Vente getById(Long id) {
-		return ivDao.getById(id);
+		return dao.getById(id);
 	}
 
 	@Override
 	public void remove(Long id) {
-		ivDao.remove(id);		
+		dao.remove(id);		
 	}
 
 	@Override
 	public Vente findOne(String paramName, Object paramValue) {
-		return ivDao.findOne(paramName, paramValue);
+		return dao.findOne(paramName, paramValue);
 	}
 
 	@Override
 	public Vente findOne(String[] paramNames, Object[] paramValues) {
-		return ivDao.findOne(paramNames, paramValues);
+		return dao.findOne(paramNames, paramValues);
 	}
 
 	@Override
 	public int findCountBy(String paramName, String paramValue) {
-		return ivDao.findCountBy(paramName, paramValue);
+		return dao.findCountBy(paramName, paramValue);
 	}
 
 }
